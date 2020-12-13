@@ -7,6 +7,14 @@
         <link rel='stylesheet' href='{{ url_for("static", filename="css/bootstrap.min.css") }}'>
         <link rel='stylesheet' href='{{ url_for("static", filename="css/base.css") }}'>
     </head>
+    <style>
+        body{
+            background-color: #06090f;
+        }
+        .section-heading{
+            color: white;
+        }
+    </style>
     <body>
          <!-- data-spy="scroll" data-target=".navbar" data-offset="10" -->
         <nav class="navbar navbar-default navbar-fixed-top">
@@ -18,28 +26,28 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="/">
-                        &lt Take Notes &gt
+                    <a class="navbar-brand" href="/" style="color: #06090f;">
+                        &lt NOTEify &gt
                     </a>
                 </div><!-- ./navbar-header -->
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav" id="navbar-links">
                         {% if username %}
                             <li>
-                                <a href="/notes/add/">NEW NOTE</a>
+                                <a href="/notes/add/" style="color: #06090f;">NEW NOTE</a>
                             </li>
                             <li>
-                                <a href="/profile/">VIEW ALL NOTES</a>
+                                <a href="/profile/" style="color: #06090f">VIEW ALL NOTES</a>
                             </li>
                             <li>
-                                <a href="/tags/add/">NEW TAG</a>
+                                <a href="/tags/add/" style="color: #06090f">NEW TAG</a>
                             </li>
                             <li>
-                                <a href="/tags/">VIEW ALL TAGS</a>
+                                <a href="/tags/" style="color: #06090f"">VIEW ALL TAGS</a>
                             </li>
                         {% else %}
                             <li>
-                                <a href="/"> HOME </a>
+                                <a href="/" style="color: #06090f;"> HOME </a>
                             </li>
                         {% endif %}
                     </ul>
@@ -69,8 +77,8 @@
                                 </ul>
                             </li>
                         {% else %}
-                            <li><a href="/signup/"><span class="glyphicon glyphicon-user"></span> Sign Up </a></li>
-                            <li><a href="/login/"><span class="glyphicon glyphicon-log-in"></span> Login </a></li>
+                            <li><a href="/signup/"><span class="glyphicon glyphicon-user" style="color: #06090f"></span> Sign Up </a></li>
+                            <li><a href="/login/"><span class="glyphicon glyphicon-log-in" style="color: #06090f"></span> Login </a></li>
                         {% endif %}
                     </ul>
                 </div><!--/.nav-collapse -->
@@ -99,7 +107,7 @@
     {{ pagedown.include_pagedown() }}
     <script type="text/javascript">
         var typed3 = new Typed('.element', {
-           strings: ['A Simple Note Taking App', 'A Simple Web App', 'A Simple Note Taking  Web App'],
+           strings: ['Welcome To NOTEify','A Simple Note Web Taking App'],
            typeSpeed: 100,
            backSpeed: 100,
            smartBackspace: true, // this is a default
